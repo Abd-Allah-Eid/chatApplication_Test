@@ -2,7 +2,9 @@
   "name": "react-chat-tutorial",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://beatheat.github.io/chatApplication_Test",
   "dependencies": {
+    "chalk": "^2.4.2",
     "cors": "^2.8.4",
     "express": "^4.16.3",
     "react": "^16.2.0",
@@ -14,8 +16,16 @@
   },
   "scripts": {
     "start": "concurrently \"node ./server.js\" \"react-scripts start\"",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
